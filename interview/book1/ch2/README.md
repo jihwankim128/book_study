@@ -228,6 +228,28 @@
     * 무시할 수 없는 인터럽트는 우선 순위가 높은 인터럽트
   * 프로그래머블 인터럽트 컨트롤러(PIC)를 통해 다중 인터럽트를 처리
     * 각 칩에 달린 핀으로 인터럽트의 우선순위를 정리해서 CPU에 알려줌
-    * NMI까지 우선순위를 판별하지는 못함
-* DMA 입출력
-  * 
+    * NMI(무시할 수 없는 인터럽트)까지 우선순위를 판별하지는 못함
+* DMA(Direct Memory Access) 입출력
+  * 프로그램, 인터럽트 기반은 반드시 CPU 가 필요하며 CPU의 부하로 발전
+  * 이를 해결하기 위해 CPU를 거치지 않고도 I/O와 Memory가 상호작용하는 방식이 등장
+    * 직접 메모리에 접근할 수 있는 입출력 기능 (DMA)
+  * DMA 컨트롤러를 활용해 입출력 버스로 I/O의 정보를 관리
+    * DMA 컨트롤러에서 직접 입출력 작업을 하며 작업이 끝나면 CPU에 인터럽트
+* 사이클 스틸링
+  * CPU의 시스템 버스는 동시 사용이 불가능 하다 (공유 불가능)
+  * DMA 컨트롤러는 CPU 가 시스템 버스를 사용하지 않을 때 마다 슬쩍 사용
+  * 혹은 CPU가 시스템 버스 사용을 양보하게 됨
+  * 이 과정을 마치 훔친다 해서 사이클 스틸링
+* PCIe(Peripheral Component Interconnect express)
+  * PCI 입출력 버스의 발전된 형태
+  * PCIe 버전에 따라 최대 속도가 달라질 수 있음
+    * 버전이 증가함에 따라 레인당 최대 속도가 빨라짐
+  * PCIe 버스가 여러 레인을 이용해 정보를 주고 받을 수 있음
+    * PCIe version x lane count
+
+## GPU (Graphic Processing Unit)
+
+범용적인 목적의 GPU 사용 기술: GPGPU(General-Purpose computing on Graphic Process Units)
+* CPU의 보조, 보조 프로세서
+* 분할 작업에 좋음, 하나의 GPU의 코어 개수가 매우 많음
+* 자체적 캐시, 메모리를 가지고 있음

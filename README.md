@@ -46,6 +46,6 @@
 | 분야    | 도서명                                      | 상태 | 진행률                                                                                               |
 |-------|------------------------------------------|----|---------------------------------------------------------------------------------------------------|
 | 시스템   | [혼자서 공부하는 컴퓨터 구조 + 운영체제](./system/book1) | 📖 | ![진행률](https://progress-bar.xyz/0/?scale=503&title=progress&width=200&color=808080&suffix=/503)   |
-| 기술 면접 | [이것이 (취업을 위한) 컴퓨터 과학이다](./interview/book1) | 📖 | ![진행률](https://progress-bar.xyz/174/?scale=640&title=progress&width=200&color=808080&suffix=/640) |
+| 기술 면접 | [이것이 (취업을 위한) 컴퓨터 과학이다](./interview/book1) | 📖 | ![진행률](https://progress-bar.xyz/206/?scale=640&title=progress&width=200&color=808080&suffix=/640) |
 
 - 📖 : 진행 중, ⏳ : 예정, ✅ : 완료
